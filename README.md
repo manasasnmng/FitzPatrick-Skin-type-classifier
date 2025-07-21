@@ -43,8 +43,6 @@ This web app helps you analyze your skin tone live using your webcam and classif
 | V       | Brown skin, very rarely burns, tans very easily      |
 | VI      | Dark brown or black skin, never burns                |
 
-![Fitzpatrick Scale](./images/fitzpatrick-scale.png)  
-_📌 Upload your `fitzpatrick-scale.png` image to a folder named `images` in your repo_
 
 ---
 
