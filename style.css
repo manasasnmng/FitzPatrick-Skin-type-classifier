@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f2e9;
+  color: #1b3a2f;
+  font-family: 'Inter', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  color: #1f3d2c;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  align-items: flex-end;
+  /* aligns all children (formial & labs) to the right */
+}
+
+
+.formial {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.labs {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  letter-spacing: 0.1em;
+  text-align: left;
+  transform: translateY(-0.2em);
+  /* Removed margin-left: auto */
+}
+
+
+h1 {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: black;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Container styles */
+#container,
+#quiz {
+  max-width: 420px;
+  margin: 1.5rem auto;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+video,
+canvas {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+#overlayBox {
+  position: absolute;
+  width: 180px;
+  height: 220px;
+  border: 3px dashed #10b981;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Result box */
+.result {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Styling individual question container */
+.question,
+.age,
+.gender,
+.skin_type {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Input and select box styling */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for inputs and select boxes */
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
+}
+
+/* Focus effect for inputs and select boxes */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
+}
+
+/* Radio button group styling */
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.radio-group input[type="radio"] {
+  display: none;
+}
+
+.radio-group label {
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.radio-group input[type="radio"]:checked+label {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+}
+
+.radio-group label:hover {
+  background-color: #f0fdfa;
+  border-color: #99f6e4;
+  transform: scale(1.05);
+}
+
+#issueBox {
+  margin-top: 10px;
+}
+
+/* Button styling */
+button[type="submit"] {
+  background-color: #10b981;
+  color: white;
+  font-weight: 600;
+  cursor: not-allowed;
+  opacity: 0.5;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Submit button enabled state */
+button[type="submit"]:enabled {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Submit button hover effect */
+button[type="submit"]:enabled:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+
+/* Retake & Capture button container */
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Capture & Retake button shared styles */
+#captureBtn,
+#retakeBtn {
+  background-color: #f59e0b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Retake button specific */
+#retakeBtn {
+  display: none;
+  /* hidden by default */
+}
+
+/* Hover effects for both buttons */
+#captureBtn:hover,
+#retakeBtn:hover {
+  background-color: #d97706;
+  transform: scale(1.05);
+}
+
+video {
+  transform: scaleX(-1);
+  /* real (non-mirrored) camera view */
+}
+
+#loadingMessage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* semi-transparent white */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  /* ensure it's above everything */
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #333;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
