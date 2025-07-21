@@ -30,7 +30,7 @@ This web app helps you analyze your skin tone live using your webcam and classif
 ---
 
 ## **Fitzpatrick Scale**
-![Fitzpatrick Scale](download.webp)
+![Fitzpatrick Scale](download.webp) 
 
 > The Fitzpatrick scale classifies skin types based on how they react to sun exposure:
 
