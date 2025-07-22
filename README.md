@@ -12,7 +12,6 @@ Built using **HTML5**, **JavaScript**, **CSS**, and **MediaPipe FaceMesh**, the 
 - [Technologies Used](#technologies-used)
 - [Installation and Setup](#installation-and-setup)
 - [Usage](#usage)
-- [Demo](#demo)
 - [Future Improvements](#future-improvements)
 - [License](#license)
 
